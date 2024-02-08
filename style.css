@@ -101,6 +101,7 @@ a {text-decoration: none; color: #000; transition: 0.3s;}
     footer {
         transform: translateY(80px);
         background-color: rgb(39, 76, 119);
+        width: 100%;
     }
     
     .source {
