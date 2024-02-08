@@ -104,10 +104,10 @@ a {text-decoration: none; color: #000; transition: 0.3s;}
     }
     
     .source {
-        margin: auto 0;
+        margin: auto 20px;
     }
-
+    .source li{
+        margin-bottom: 2%;
+    }
     .source a{text-decoration: underline;}
-
-    
 }
