@@ -1,0 +1,110 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lora&display=swap');
+*{padding: 0; margin: 0; font-family: 'Lora', serif; line-height: 1.7;}
+
+a {text-decoration: none; color: #000; transition: 0.3s;}
+
+.top-menu a:hover {font-weight: bold;}
+
+.bottom-menu a:hover {color: white;}
+
+.bottom-menu a{color: rgb(163, 206, 241);}
+
+.title ul{
+    list-style: none;
+}
+
+@media (min-width: 1500px) {
+    .top-menu, .bottom-menu, .title ul{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-menu {
+        background-color: rgb(163, 206, 241);
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        z-index: 999;
+    }
+
+    .title {
+        width: 70%;
+    }
+
+    .title li:not(:last-child){
+        margin-right: 3%;
+    }
+
+    .logo img{
+        width: 30px;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .news {
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(70px);
+    }
+
+    footer {
+        transform: translateY(80px);
+        background-color: rgb(39, 76, 119);
+    }
+
+    .source {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .top-menu, .bottom-menu, .title ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .top-menu {
+        background-color: rgb(163, 206, 241);
+        height: 330px;
+    }
+    
+    .title {
+        height: 70%;
+    }
+    
+    .title li:not(:last-child) {
+        margin-bottom: 2%;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+    
+    .logo {
+        height: 30%;
+    }
+    
+    .news {
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(70px);
+    }
+    
+    footer {
+        transform: translateY(80px);
+        background-color: rgb(39, 76, 119);
+    }
+    
+    .source {
+        height: 70%;
+        margin: auto 0;
+    }
+}
