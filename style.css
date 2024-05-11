@@ -1,113 +1,218 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lora&display=swap');
-*{padding: 0; margin: 0; font-family: 'Lora', serif; line-height: 1.7;}
+:root {
+    --primary-bg-color: #333333; /* Темно-серый для более контрастного фона */
+    --primary-text-color: #FFFFFF; /* Белый для текста */
+    --secondary-bg-color: #FFD700; /* Золотой для второстепенного фона */
+    --accent-text-color: #000000; /* Черный для акцентного текста */
+    --accent-element-color: #E63946; /* Ярко-красный для интерактивных элементов */
+    --gradient-color-start: #6DD5FA; /* Начальный цвет градиента */
+    --gradient-color-end: #FF758C; /* Конечный цвет градиента */
+}
 
-a {text-decoration: none; color: #000; transition: 0.3s;}
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-text-color);
+    background: linear-gradient(to right, var(--gradient-color-start), var(--gradient-color-end));
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+}
 
-.top-menu a:hover {font-weight: bold;}
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    color: var(--accent-text-color);
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-.bottom-menu a:hover {color: white;}
+nav {
+    background-color: var(--accent-element-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-.bottom-menu a{color: rgb(163, 206, 241);}
-
-.title ul{
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-@media (min-width: 1500px) {
-    .top-menu, .bottom-menu, .title ul{
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .top-menu {
-        background-color: rgb(163, 206, 241);
-        position: fixed;
-        width: 100%;
-        height: 60px;
-        z-index: 999;
-    }
-
-    .title {
-        width: 70%;
-    }
-
-    .title li:not(:last-child){
-        margin-right: 3%;
-    }
-
-    .logo img{
-        width: 30px;
-    }
-
-    .logo {
-        width: 30%;
-    }
-
-    .news {
-        width: 70%;
-        margin: 0 auto;
-        transform: translateY(70px);
-    }
-
-    footer {
-        transform: translateY(80px);
-        background-color: rgb(39, 76, 119);
-    }
-
-    .source {
-        width: 70%;
-        margin: 0 auto;
-    }
+nav a {
+    color: var(--primary-bg-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+nav a:hover, nav a:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
-@media (max-width: 1500px) {
-    .top-menu, .bottom-menu, .title ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
-    
-    .top-menu {
-        background-color: rgb(163, 206, 241);
-        height: 330px;
-    }
-    
-    .title {
-        height: 70%;
-    }
-    
-    .title li:not(:last-child) {
-        margin-bottom: 2%;
-    }
-    
-    .logo img {
-        width: 35px;
-    }
-    
-    .logo {
-        height: 30%;
-    }
-    
-    .news {
-        width: 70%;
-        margin: 0 auto;
-        transform: translateY(70px);
-    }
-    
-    footer {
-        transform: translateY(80px);
-        background-color: rgb(39, 76, 119);
-    }
-    
-    .source {
-        margin: auto 20px;
-    }
-    .source li:not(:last-child){
-        margin-bottom: 2%;
-    }
-    .source a{text-decoration: underline;}
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 90px 20px;
+  text-align: left;
+  position: relative;
+  top: 50px;
+  bottom: 50px;
+  background-color: var(--primary-text-color);
+  color: var(--primary-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Добавлено для вертикальной прокрутки */
+  /* padding-bottom: 90px; */
+}
+
+img {
+  width: 500px;
+  height: 300px;
+}
+
+footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--accent-text-color);
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 40px;
+}
+
+/* Стилизация полосы прокрутки для WebKit-браузеров (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 20px;
+  }
+  
+  /* Стилизация полосы прокрутки для Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+  
+  /* Стилизация полосы прокрутки для Internet Explorer и Edge */
+  * {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  
+  /* Для будущей совместимости с другими браузерами, можно добавить следующие стили */
+  :root {
+    --scrollbarBG: #f1f1f1;
+    --thumbBG: #888;
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 10px;
+    border: 3px solid var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  /* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  header, footer {
+    padding: 10px 0;
+  }
+  img {
+    width: 100%;
+    height: 20%;
+  }
+  .main-content {
+    padding: 110px 10px 50px 10px;
+    top: 40px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 5px 10px;
+    margin: 3px;
+  }
+}
+
+/* Адаптивность для планшетов */
+@media (min-width: 601px) and (max-width: 1024px) {
+  header, footer {
+    padding: 15px 0;
+  }
+  img {
+    width: 100%;
+    height: 30%;
+  }
+  .main-content {
+    padding: 100px 15px;
+    top: 45px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  nav a {
+    padding: 7px 12px;
+    margin: 4px;
+  }
+}
+
+/* Адаптивность для настольных компьютеров и больших экранов */
+@media (min-width: 1025px) {
+  header, footer {
+    padding: 20px 0;
+  }
+
+  .main-content {
+    padding: 100px 20px 80px;
+    top: 50px;
+  }
+  img {
+    width: 100%;
+    height: 25%;
+  }
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav a {
+    padding: 10px 15px;
+    margin: 5px;
+  }
 }
