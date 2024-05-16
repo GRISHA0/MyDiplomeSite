@@ -209,6 +209,7 @@ footer {
   }
   nav ul {
     justify-content: flex-start;
+      flex-direction: row;
   }
 
   nav a {
