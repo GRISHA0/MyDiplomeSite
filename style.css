@@ -169,7 +169,7 @@ footer {
 }
 
 /* Адаптивность для планшетов и настольных компьютеров */
-@media (min-width: 1001px) {
+@media (min-width: 1001px) and (max-width: 1499px) {
   header, footer {
     padding: 15px 0;
   }
