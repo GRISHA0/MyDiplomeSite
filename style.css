@@ -144,7 +144,7 @@ footer {
   }
 
   /* Адаптивность для мобильных устройств */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   header, footer {
     padding: 10px 0;
   }
@@ -169,7 +169,7 @@ footer {
 }
 
 /* Адаптивность для планшетов */
-@media (min-width: 601px) and (max-width: 1100px) {
+@media (min-width: 1101px) and (max-width: 1200px) {
   header, footer {
     padding: 15px 0;
   }
@@ -194,7 +194,7 @@ footer {
 }
 
 /* Адаптивность для настольных компьютеров и больших экранов */
-@media (min-width: 11101px) {
+@media (min-width: 1500px) {
   header, footer {
     padding: 20px 0;
   }
